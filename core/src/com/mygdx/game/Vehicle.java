@@ -10,11 +10,6 @@ import com.badlogic.gdx.utils.TimeUtils;
 import java.util.Iterator;
 
 public class Vehicle {
-//    private static Texture carOneImage;
-//    private static Texture carTwoImage;
-//    private static Texture boatImage;
-//    private static Array<Rectangle> carOne;
-//    private static Array<Rectangle> carTwo;
 
     public Texture vehicleImage;
     public Rectangle vehicleRectangle;

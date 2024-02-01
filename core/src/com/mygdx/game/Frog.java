@@ -43,7 +43,6 @@ public class Frog {
             lastMoveTime = TimeUtils.nanoTime();
         }
         if (upMove && frogCanMove) {
-            System.out.println("moving up");
             if (frog.y < Constants.SCREEN_HEIGHT - frog.height) {
                 frog.y += Constants.FROG_JUMP;
                 Main.jumpSound.play(2.0f);
