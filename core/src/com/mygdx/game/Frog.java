@@ -4,7 +4,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.utils.TimeUtils;
-import com.sun.org.apache.bcel.internal.Const;
 
 public class Frog {
     private static Texture frogImage;
@@ -20,10 +19,10 @@ public class Frog {
     public static void createFrog() {
         frogImage = new Texture(Gdx.files.local("frog.png"));
         frog = new Rectangle();
-        frog.width = 60;
-        frog.height = 74;
+        frog.width = Constants.FROG_WIDTH;
+        frog.height = Constants.FROG_HEIGHT;
         frog.x = (float) Constants.SCREEN_WIDTH / 2 - frog.width / 2;
-        frog.y = 10;
+        frog.y = Constants.FROG_START_Y;
     }
 
     public static void renderFrog() {
@@ -42,7 +41,7 @@ public class Frog {
             // update timer
             lastMoveTime = TimeUtils.nanoTime();
         }
-        if(upMove && frogCanMove) {
+        if (upMove && frogCanMove) {
             if (frog.y < Constants.SCREEN_HEIGHT - frog.height) {
                 frog.y += frog.height / 2;
             }

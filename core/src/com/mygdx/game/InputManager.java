@@ -1,11 +1,10 @@
 package com.mygdx.game;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 
 public class InputManager implements InputProcessor {
-    public boolean keyDown (int keycode) {
+    public boolean keyDown(int keycode) {
         switch (keycode) {
             case Input.Keys.UP:
                 // normally would call a setter method, but no frog instance created
@@ -16,11 +15,13 @@ public class InputManager implements InputProcessor {
                 Frog.downMove = true;
                 Frog.upMove = false;
                 break;
+            default:
+                break;
         }
         return true;
     }
 
-    public boolean keyUp (int keycode) {
+    public boolean keyUp(int keycode) {
         switch (keycode) {
             case Input.Keys.UP:
                 Frog.upMove = false;
@@ -28,19 +29,21 @@ public class InputManager implements InputProcessor {
             case Input.Keys.DOWN:
                 Frog.downMove = false;
                 break;
+            default:
+                break;
         }
         return true;
     }
 
-    public boolean keyTyped (char character) {
+    public boolean keyTyped(char character) {
         return false;
     }
 
-    public boolean touchDown (int x, int y, int pointer, int button) {
+    public boolean touchDown(int x, int y, int pointer, int button) {
         return false;
     }
 
-    public boolean touchUp (int x, int y, int pointer, int button) {
+    public boolean touchUp(int x, int y, int pointer, int button) {
         return false;
     }
 
@@ -49,15 +52,15 @@ public class InputManager implements InputProcessor {
         return false;
     }
 
-    public boolean touchDragged (int x, int y, int pointer) {
+    public boolean touchDragged(int x, int y, int pointer) {
         return false;
     }
 
-    public boolean mouseMoved (int x, int y) {
+    public boolean mouseMoved(int x, int y) {
         return false;
     }
 
-    public boolean scrolled (float amountX, float amountY) {
+    public boolean scrolled(float amountX, float amountY) {
         return false;
     }
 }

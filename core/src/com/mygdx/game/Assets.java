@@ -12,7 +12,7 @@ public class Assets {
     private static Rectangle road;
     private static Rectangle river;
 
-    public static void createAssets () {
+    public static void createAssets() {
         fieldImage = new Texture(Gdx.files.local("field.png"));
         roadImage = new Texture(Gdx.files.local("road.jpeg"));
         riverImage = new Texture(Gdx.files.local("blue.png"));
@@ -27,16 +27,16 @@ public class Assets {
         road.width = Constants.SCREEN_WIDTH;
         road.height = Constants.SCREEN_HEIGHT;
         road.x = 0;
-        road.y = 25;
+        road.y = Constants.ROAD_Y;
 
         river = new Rectangle();
         river.width = Constants.SCREEN_WIDTH;
         river.height = Constants.SCREEN_HEIGHT;
         river.x = 0;
-        river.y = 400;
+        river.y = Constants.RIVER_Y;
     }
 
-    public static void renderAssets () {
+    public static void renderAssets() {
         Main.batch.draw(fieldImage, field.x, field.y);
         Main.batch.draw(roadImage, road.x, road.y);
         Main.batch.draw(riverImage, river.x, river.y);

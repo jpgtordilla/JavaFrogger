@@ -18,7 +18,7 @@ public class Main extends ApplicationAdapter {
 	private OrthographicCamera camera;
 
 	@Override
-	public void create () {
+	public void create() {
 		Assets.createAssets();
 		Frog.createFrog();
 		Vehicle.createVehicles();
@@ -30,7 +30,7 @@ public class Main extends ApplicationAdapter {
 	}
 
 	@Override
-	public void render () {
+	public void render() {
 		ScreenUtils.clear(0, 0, 0, 1);
 		camera.update();
 		batch.setProjectionMatrix(camera.combined);
@@ -42,7 +42,7 @@ public class Main extends ApplicationAdapter {
 	}
 	
 	@Override
-	public void dispose () {
+	public void dispose() {
 		Frog.disposeFrog();
 		Assets.disposeAssets();
 	}
