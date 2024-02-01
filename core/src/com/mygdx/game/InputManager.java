@@ -3,17 +3,33 @@ package com.mygdx.game;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 
+// source: https://libgdx.com/wiki/input/event-handling
 public class InputManager implements InputProcessor {
     public boolean keyDown(int keycode) {
         switch (keycode) {
             case Input.Keys.UP:
-                // normally would call a setter method, but no frog instance created
                 Frog.upMove = true;
                 Frog.downMove = false;
+                Frog.rightMove = false;
+                Frog.leftMove = false;
                 break;
             case Input.Keys.DOWN:
-                Frog.downMove = true;
                 Frog.upMove = false;
+                Frog.downMove = true;
+                Frog.rightMove = false;
+                Frog.leftMove = false;
+                break;
+            case Input.Keys.RIGHT:
+                Frog.upMove = false;
+                Frog.downMove = false;
+                Frog.rightMove = true;
+                Frog.leftMove = false;
+                break;
+            case Input.Keys.LEFT:
+                Frog.upMove = false;
+                Frog.downMove = false;
+                Frog.rightMove = false;
+                Frog.leftMove = true;
                 break;
             default:
                 break;
@@ -28,6 +44,12 @@ public class InputManager implements InputProcessor {
                 break;
             case Input.Keys.DOWN:
                 Frog.downMove = false;
+                break;
+            case Input.Keys.RIGHT:
+                Frog.rightMove = false;
+                break;
+            case Input.Keys.LEFT:
+                Frog.leftMove = false;
                 break;
             default:
                 break;
