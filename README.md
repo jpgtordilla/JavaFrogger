@@ -6,3 +6,5 @@ Sprites were created using the Texture library and depict a "realistic" frog, ve
 
 https://github.com/jpgtordilla/JavaFrogger/assets/156870738/859fe8a5-f32c-45bf-82de-652fd82db5e6
 
+A future revision would instead feature a "Vehicle" interface with "Boat" and "Car" classes that would implement its methods. I would also create a "VehicleHandler" class to take care of tasks such as spawning, movement, etc., using variables specific to the "Car" and "Boat" classes to handle variations in spawn location and frequency. However, due to the relative simplicity of this project, I chose to use a single Vehicle class and create Vehicle instances for "car" and "boat" within, similar to how an IntNode would build itself through instances of itself for an IntList.
+
